@@ -1,3 +1,11 @@
+@font-face {
+  font-family: et-line;
+  src: url(../fonts/et-line.eot);
+  src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.woff) format('woff'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+  font-weight: 400;
+  font-style: normal
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,6 +34,34 @@ a:hover {
   z-index: 100000;
   background: #ffffff url('img/pageload-spinner.gif') no-repeat center center;
 }
+
+.et-icon-browser,
+.et-icon-edit, 
+.et-icon-presentation {
+    font-family: et-line;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block
+}
+
+.et-icon-browser:before {
+    content: "\e00c"
+}
+
+.et-icon-presentation:before {
+    content: "\e00e"
+}
+
+.et-icon-edit:before {
+    content: "\e01c"
+}
+
 
 .bloc {
   width: 100%;
@@ -677,8 +713,10 @@ a {
 }
 
 .tight-width-whitespace {
-  max-width: 600px;
+  max-width: 800px;
+  width: 100%;
   margin: auto;
+  gap: 10px;
 }
 
 .h1 {
@@ -737,15 +775,17 @@ h4 {
 }
 
 .portfolio-thumb {
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
   display: block;
-	max-width: 100%;
-	height: auto
+	max-width: 300px;
+	height: auto;
+  width: 100%;
 }
 
 .portfolio-row {
   margin-bottom: 44px;
   margin-top: 50px;
+  padding: 0 20px;
 }
 
 .avatar {
@@ -1044,5 +1084,9 @@ h4 {
 @media (max-width: 767px) {
   .bloc-mob-center-text {
     text-align: center;
+  }
+  .portfolio-row {
+    flex-direction: column;
+    align-items: center;
   }
 }
