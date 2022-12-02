@@ -1,9 +1,12 @@
 @font-face {
   font-family: et-line;
   src: url(../fonts/et-line.eot);
-  src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.woff) format('woff'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+  src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/et-line.woff) format('woff'),
+    url(../fonts/et-line.ttf) format('truetype'),
+    url(../fonts/et-line.svg#et-line) format('svg');
   font-weight: 400;
-  font-style: normal
+  font-style: normal;
 }
 
 body {
@@ -36,32 +39,30 @@ a:hover {
 }
 
 .et-icon-browser,
-.et-icon-edit, 
+.et-icon-edit,
 .et-icon-presentation {
-    font-family: et-line;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: inline-block
+  font-family: et-line;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
 }
 
 .et-icon-browser:before {
-    content: "\e00c"
+  content: '\e00c';
 }
 
 .et-icon-presentation:before {
-    content: "\e00e"
+  content: '\e00e';
 }
 
 .et-icon-edit:before {
-    content: "\e01c"
+  content: '\e01c';
 }
-
 
 .bloc {
   width: 100%;
@@ -277,6 +278,36 @@ a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.d-bloc .a-btn:focus,
+.d-bloc .navbar a:focus,
+.d-bloc .navbar-brand:focus,
+.d-bloc a .icon-sm:focus,
+.d-bloc a .icon-md:focus,
+.d-bloc a .icon-lg:focus,
+.d-bloc a .icon-xl:focus,
+.d-bloc h1 a:focus,
+.d-bloc h2 a:focus,
+.d-bloc h3 a:focus,
+.d-bloc h4 a:focus,
+.d-bloc h5 a:focus,
+.d-bloc h6 a:focus,
+.d-bloc p a:focus {
+  color: rgb(13, 109, 253);
+}
+
+.nav-link {
+  margin: 0 6px;
+}
+
+.btn:focus,
+.figure-links:focus,
+.social a:focus,
+.navbar-brand:focus,
+.nav-link:focus,
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgb(13, 109, 253);
+}
+
 .d-bloc .panel .btn-wire,
 .d-bloc .panel .btn-wire:hover,
 .l-bloc .btn-wire,
@@ -353,10 +384,10 @@ a:hover {
   text-align: inherit;
 }
 
-.nav > li a:hover,
+/* .nav > li a:hover,
 .nav > li a:focus {
   background: transparent;
-}
+} */
 
 .navbar-toggle {
   margin: 10px 10px 0 0;
@@ -474,13 +505,6 @@ nav .caret {
   margin: 0 0 5px 5px;
 }
 
-.btn-d,
-.btn-d:hover,
-.btn-d:focus {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-}
-
 button {
   outline: none;
 }
@@ -565,16 +589,14 @@ a[data-lightbox]:hover::before {
   font-size: 32px;
   width: 50px;
   height: 50px;
-  margin-left: -25px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   font-weight: 100;
   z-index: 1;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  top: calc(50% - 50px / 2);
+  left: calc(50% - 50px / 2);
 }
 
 a[data-lightbox]:hover img {
@@ -674,6 +696,7 @@ h4,
 h5,
 h6,
 p,
+cite,
 label,
 .btn,
 a {
@@ -682,12 +705,12 @@ a {
   color: #575757;
 }
 
-.text-16 {
-  font-style: 16px;
-}
-
 .text-18 {
   font-size: 18px;
+}
+
+.text-22 {
+  font-size: 22px;
 }
 
 .container {
@@ -737,11 +760,17 @@ a {
   max-width: 400px;
   margin: auto;
   font-size: 28px;
+  list-style-type: none;
+  padding: 0;
 }
 
 h2 {
   font-size: 22px;
   line-height: 1.4em;
+}
+
+#bloc-2-services h2 {
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -777,8 +806,8 @@ h4 {
 .portfolio-thumb {
   margin: 0 auto 24px auto;
   display: block;
-	max-width: 300px;
-	height: auto;
+  max-width: 300px;
+  height: auto;
   width: 100%;
 }
 
@@ -786,6 +815,10 @@ h4 {
   margin-bottom: 44px;
   margin-top: 50px;
   padding: 0 20px;
+}
+
+.portfolio-figcaptions {
+  padding: 0 clamp(20px, 10%, 40px);
 }
 
 .avatar {
@@ -811,7 +844,7 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-  background-color: #E03100;
+  background-color: #e03100;
 }
 
 .tc-white {
@@ -819,7 +852,7 @@ h4 {
 }
 
 .btn-atomic-tangerine {
-  background: #E03100;
+  background: #e03100;
   color: #ffffff;
 }
 
@@ -837,7 +870,7 @@ h4 {
 }
 
 .ltc-atomic-tangerine {
-  color: #E03100;
+  color: #e03100;
 }
 
 .ltc-atomic-tangerine:hover {
@@ -850,9 +883,9 @@ h4 {
 }
 
 .center-block {
-	display: block;
-	margin-right: auto;
-	margin-left: auto
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .bg-dots-bg {
@@ -864,7 +897,11 @@ h4 {
 }
 
 .bg-banniere {
-  background-image: url('img/agence-la-panthere.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/agence-la-panthere.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 .bg-presentation {
@@ -894,13 +931,13 @@ h4 {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .b-parallax {
     background-attachment: scroll;
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .b-parallax {
     background-attachment: scroll;
   }
@@ -917,21 +954,6 @@ h4 {
   #hero-bloc {
     overflow-x: hidden;
     position: relative;
-  }
-  .bloc {
-    padding-left: constant(safe-area-inset-left);
-    padding-right: constant(safe-area-inset-right);
-  }
-  .bloc-group,
-  .bloc-group .bloc {
-    display: block;
-    width: 100%;
-  }
-  .bloc-fill-screen .fill-bloc-top-edge,
-  .bloc-fill-screen .fill-bloc-bottom-edge {
-    padding: 0 20px;
-    padding-left: constant(safe-area-inset-left);
-    padding-right: constant(safe-area-inset-right);
   }
 }
 
